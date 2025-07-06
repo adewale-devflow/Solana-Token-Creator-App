@@ -7,6 +7,7 @@ import { Footer } from "../components/Footer";
 import Notifications from "../components/Notification";
 
 
+
 require("@solana/wallet-adapter-react-ui/styles.css");
 require("../styles/globals.css");
 
