@@ -31,7 +31,7 @@ const WalletContextProvider: FC<{children: ReactNode}> = ({children})=> {
   let endpoint;
 
   if(network == "mainnet-beta"){
-    endpoint = "URL"
+    endpoint = "https://solana-mainnet.g.alchemy.com/v2/S71nwcZZzGXRmX6ER_pUl"
   } else if (network == "devnet") {
     endpoint = originalEndPoint;
   } else {
