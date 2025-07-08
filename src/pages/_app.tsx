@@ -21,7 +21,7 @@ const App: FC<AppProps> = ({Component, pageProps}) => {
         <Notifications />
         <AppBar />
         <Component {...pageProps} />
-        {/*<Footer/>*/}
+        <Footer/>
       </ContextProvider>
 
       {/* //SCRIPTS */}
