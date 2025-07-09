@@ -55,7 +55,7 @@ export const Footer: FC = () => {
                   <li>
                     <a href="#" className="text-default-300
                     text-base transaction-all
-                    hove:text-white">
+                    hover:text-white">
                       <i data-lucide="gauge-circle"
                       className="me-2 inline-block
                       h-4 w-4"
@@ -68,8 +68,141 @@ export const Footer: FC = () => {
               }
             </ul>
           </div>
+
+          <div className="col-span-2 
+          sm:col-span-1 lg:col-span-3">
+            <ul className="flex flex-col gap-3">
+               <h5 className="text-default-200 mb-2
+              font-medium lg:text-lg xl:text-xl">
+                My Account
+              </h5> 
+              {
+                menuTwo.map((item, index) => (
+                  <li key={index}>
+                    <a href="#" className="text-default-300
+                    text-base transaction-all
+                    hover:text-white">
+                      <i data-lucide="gauge-circle"
+                      className="me-2 inline-block
+                      h-4 w-4"
+                      >
+                        {item}
+                      </i>
+                    </a>
+                  </li>
+                ))
+              }
+
+            </ul>
+          </div>
+
+          <div className="col-span-2
+          lg:col-span-6">
+            <div className="bg-primary/20
+             rounded-xl">
+              <div className="p-10">
+                <h6 className="mb-4 text-xl 
+                text-white">
+                  NewsLetter
+                </h6>
+                <p className="text-default-200 mb
+                text-base font-medium">
+                  Signup and recevie the latest tips
+                </p>
+
+                <form onSubmit={handleSubmit} className="mt-4"
+                className="mb-6 space-y-2">
+                  <label htmlFor="email"
+                  classNmae="text-base
+                  text-white">
+                   Email 
+                  </label>
+
+                  <div className="relative">
+                    <input type="email" id="email"
+                    name="email" className="bg-default-950/60
+                    pe-40 ps-4 h-12 w-full rounded-lg border-white/10 py-4
+                    text-white backdrop-blur-3xl
+                    focus:border-white/10
+                    focus:ring-0"
+                    />
+
+                    <button type="submit"
+                    disable={state.submitting}
+                    className="hover:bg-primary-hover 
+                    hover:border-primary-hover
+                    border-primary bg primary end-
+                    [6px] inline-flex h9 items-center
+                    justify-center gap-2
+                    rounded-md
+                    px-6 text-white transition-all">
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+
+                <div>
+                  <h6 className="mb-4 text-base
+                  text-white">Follow Us</h6>
+                  <ul className="flex flex-wrap
+                  items-center gap-1">
+                    {[<TiSocialFacebook/>,
+                      <TiSocialLinkedin/>,
+                      <TiSocialTwitter/>,
+                      <TiSocialYoutube/>,
+                    ].map((social, index)=>{
+                      <li key={index}>
+                        <a href="#"
+                        className="hover:bg-primary
+                        group inline-flex h-10 w-10 items-center
+                        justify-center rounded-lg border border-white/10
+                        transition-all
+                        duration-500"
+                        >
+                          <i data-lucide="facebook"
+                          className="text-default-300
+                          group-hover:text-white"
+                          >
+                            {social}
+                          </i>
+                        </a>
+                      </li>
+                    }
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+     {/* //COPYRIGHT */}
+     <div className="border-t border-white/10
+     py-6">
+      <div className="md:text-start container
+      flex h-full-wrap items-center
+      justify-center gap-4 
+      text-center md:justify-between lg:px-20">
+        <p className="text-default-400 text-base
+        font-medium">
+          @ SolanaAI -
+          <a href="#">
+            Design & Created{" "}
+            <i
+              data-lucide="heart"
+              className="inline
+              h-4 w-4 fill-red-500 text-red-500"
+            ></i>
+            by @Adewale-devflow
+          </a>
+        </p>
+        <p className="text-default-400 text-base
+        font-medium">
+          Terms Conditions and Policy
+        </p>
+
+      </div>
+      </div>
     </footer>
-  )
-}
+  );
+};
